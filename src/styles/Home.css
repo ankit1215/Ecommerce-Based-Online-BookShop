@@ -1,0 +1,118 @@
+.home-container {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  
+  .hero {
+    background: linear-gradient(120deg, #007bff, #00c6ff);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #ffe600;
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #ffd700;
+  }
+  
+  .categories, .best-sellers, .join-now {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .category-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .category-card {
+    background-color: #f4f4f4;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .join-now {
+    background-color: #f9f9f9;
+  }
+/* Home Page Button Styling */
+.home-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button Hover Effect */
+  .home-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);  /* Slightly enlarge the button */
+  }
+  
+  /* Button Focus Effect */
+  .home-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.6);
+  }
+
+  /* Home Page Fade-in Effect */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Apply Fade-in Effect to the Home Container */
+  .home-container {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Apply Fade-in to Text */
+  .home-container h2,
+  .home-container p {
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  .home-container .home-button {
+    animation: fadeIn 2s ease-out;
+  }
+  
+    

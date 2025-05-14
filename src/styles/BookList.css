@@ -1,0 +1,32 @@
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+  }
+  /* Hover effect for Book Cards */
+.book-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+/* Scroll-in animation */
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply Scroll-in effect */
+  .book-card {
+    animation: slideIn 0.7s ease-out;
+  }
+    

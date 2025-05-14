@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,49 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* src/styles/main.css (additional styles for Home and BookCard) */
+
+.book-list {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  background-color: white;
+}
+
+.book-card img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.book-card h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.book-card p {
+  color: #555;
+}
+
+.book-card button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.book-card button:hover {
+  background-color: #444;
 }
