@@ -2,6 +2,7 @@ import React from 'react';
 import { FaTrash, FaPlus, FaMinus } from 'react-icons/fa';
 import '../styles/CartPage.css';
 import { useCart } from '../context/CartContext';
+import { useNavigate } from 'react-router-dom'; // 🧠 Add this line
 
 export default function Cart() {
   const {
@@ -11,6 +12,8 @@ export default function Cart() {
     decrementQuantity,
     totalAmount,
   } = useCart();
+
+  const navigate = useNavigate(); // 🧠 Initialize navigation
 
   return (
     <div className="cart-container">
@@ -46,7 +49,12 @@ export default function Cart() {
 
           <div className="cart-summary">
             <h3>Total: ₹{totalAmount}</h3>
-            <button className="checkout-btn">Proceed to Checkout</button>
+            <button
+              className="checkout-btn"
+              onClick={() => navigate('/checkout')} // ✅ Navigate to Checkout
+            >
+              Proceed to Checkout
+            </button>
           </div>
         </div>
       )}

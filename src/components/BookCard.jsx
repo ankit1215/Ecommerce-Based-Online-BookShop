@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import '../styles/BookCard.css';
 import { FaShoppingCart, FaStar, FaHeart, FaRegHeart } from 'react-icons/fa';
 import { useWishlist } from '../context/WishlistContext';
+import { useCart } from '../context/CartContext'; 
 
-export default function BookCard({ book, addToCartHandler }) {
+export default function BookCard({ book }) {
   const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
+  const { addToCart } = useCart(); 
+
   const [isWishlisted, setIsWishlisted] = useState(false);
 
   useEffect(() => {
-    // Check if the book is already in the wishlist when the component mounts
     setIsWishlisted(wishlist.some((b) => b.id === book.id));
   }, [wishlist, book.id]);
 
@@ -19,6 +21,11 @@ export default function BookCard({ book, addToCartHandler }) {
       addToWishlist(book);
     }
     setIsWishlisted(!isWishlisted);
+  };
+
+  const handleAddToCart = () => {
+    addToCart(book); 
+    alert(`${book.title} added to cart!`); // or toast/snackbar for better UI
   };
 
   return (
@@ -50,7 +57,7 @@ export default function BookCard({ book, addToCartHandler }) {
           )}
         </p>
 
-        <button className="buy-button" onClick={() => addToCartHandler(book)}>
+        <button className="buy-button" onClick={handleAddToCart}>
           <FaShoppingCart /> Add to Cart
         </button>
       </div>
